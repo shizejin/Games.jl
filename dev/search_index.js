@@ -29,7 +29,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "Usage",
     "category": "section",
-    "text": "Once installed, the Games package can be used by typingusing GamesThe Base type Player can be created by passing a payoff matrix.player1 = Player([3 1; 0 2])A 2-player NormalFormGame can be created either by passing Player instances,player2 = Player([2 0; 1 3])\ng = NormalFormGame((player1, player2))or by passing a payoff matrix directly.payoff_bimatrix = Array{Int}(2, 2, 2)\npayoff_bimatrix[1, 1, :] = [3, 2]\npayoff_bimatrix[1, 2, :] = [1, 1]\npayoff_bimatrix[2, 1, :] = [0, 0]\npayoff_bimatrix[2, 2, :] = [2, 3]\ng = NormalFormGame(payoff_bimatrix)After constructing a NormalFormGame, we can find its Nash Equilibria by using methods of Games. For example, pure_nash finds all pure action Nash Equilibria by enumeration.pure_nash(g)Please see the notebooks on QuantEcon for more details."
+    "text": "Once installed, the Games package can be used by typingusing GamesThe Base type Player can be created by passing a payoff matrix.player1 = Player([3 1; 0 2])A 2-player NormalFormGame can be created either by passing Player instances,player2 = Player([2 0; 1 3])\ng = NormalFormGame((player1, player2))or by passing a payoff matrix directly.payoff_bimatrix = Array{Int}(undef, 2, 2, 2)\npayoff_bimatrix[1, 1, :] = [3, 2]\npayoff_bimatrix[1, 2, :] = [1, 1]\npayoff_bimatrix[2, 1, :] = [0, 0]\npayoff_bimatrix[2, 2, :] = [2, 3]\ng = NormalFormGame(payoff_bimatrix)After constructing a NormalFormGame, we can find its Nash Equilibria by using methods of Games. For example, pure_nash finds all pure action Nash Equilibria by enumeration.pure_nash(g)Please see the notebooks on QuantEcon for more details."
 },
 
 {
